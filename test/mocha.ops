@@ -1,0 +1,5 @@
+--reporter spec
+--recursive
+--timeout 18000
+--require ./bootstrap.test.js
+--require mocha-clean

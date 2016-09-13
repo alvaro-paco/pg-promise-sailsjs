@@ -1,0 +1,512 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for controllers/PetController.js</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../prettify.css" />
+    <link rel="stylesheet" href="../base.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(../sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class='wrapper'>
+  <div class='pad1'>
+    <h1>
+      <a href="../index.html">all files</a> / <a href="index.html">controllers/</a> PetController.js
+    </h1>
+    <div class='clearfix'>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">71.67% </span>
+        <span class="quiet">Statements</span>
+        <span class='fraction'>43/60</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">43.75% </span>
+        <span class="quiet">Branches</span>
+        <span class='fraction'>7/16</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">73.33% </span>
+        <span class="quiet">Functions</span>
+        <span class='fraction'>22/30</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">82.69% </span>
+        <span class="quiet">Lines</span>
+        <span class='fraction'>43/52</span>
+      </div>
+    </div>
+  </div>
+  <div class='status-line medium'></div>
+<pre><table class="coverage">
+<tr><td class="line-count quiet">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85
+86
+87
+88
+89
+90
+91
+92
+93
+94
+95
+96
+97
+98
+99
+100
+101
+102
+103
+104
+105
+106
+107
+108
+109
+110
+111
+112
+113
+114
+115
+116
+117
+118
+119
+120
+121
+122
+123
+124
+125
+126
+127
+128
+129
+130
+131
+132
+133
+134
+135
+136
+137
+138
+139
+140
+141
+142
+143
+144
+145
+146
+147
+148
+149
+150</td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">/**
+ * PetController
+ *
+ * @description :: Server-side logic for managing Pets
+ * @help        :: See http://sailsjs.org/#!/documentation/concepts/Controllers
+ */
+&nbsp;
+module.exports = {
+	tx: function (req, res) {
+        <span class="missing-if-branch" title="if path not taken" >I</span>if(!db) <span class="cstat-no" title="statement not covered" >db = pgp(cn);</span>
+        db.tx(function (t) {
+            // `t` and `this` here are the same;
+            // creating a sequence of transaction queries:
+            var data = req.body;
+            var q1 = this.none('INSERT INTO pet (name, age) VALUES(\'' + data.name + '\', ' + data.age + ')');
+            //var strQ = 'INSERT INTO table(${table~}) VALUES (${values^})';
+            // var q1 = this.none(strQ, {table: 'Users', values:[null, "John", 23, null, null]});
+            //var q2 = this.one(strQ, {table: 'Pet', values:[null, "Scot", 22, null, null]});
+&nbsp;
+            // returning a promise that determines a successful transaction:
+            return this.batch([q1]); // all of the queries are to be resolved;
+        })
+        .then(function (data) {
+            // success;
+            Pet.find()
+            .populateAll()
+            .exec(function (err, results) {
+                <span class="missing-if-branch" title="if path not taken" >I</span>if(err) <span class="cstat-no" title="statement not covered" >return res.json(500, JSON.stringify(err))</span>
+                return res.json(201, results)   
+            })
+        })
+        .catch(<span class="fstat-no" title="function not covered" >function (error) {</span>
+            // error;
+<span class="cstat-no" title="statement not covered" >            return res.json(500, error)</span>
+        });
+    },
+    fail: function (req, res) {
+        <span class="missing-if-branch" title="if path not taken" >I</span>if(!db) <span class="cstat-no" title="statement not covered" >db = pgp(cn);</span>
+        db.tx(function (t) {
+            // `t` and `this` here are the same;
+            // creating a sequence of transaction queries:
+            var q1 = this.none('INSERT INTO pet (name, age) VALUES(\'Micke\', 23)');
+            var strQ = 'INSERT INTO table(${table~}) VALUES (${values^})';
+            // var q1 = this.none(strQ, {table: 'Users', values:[null, "John", 23, null, null]});
+            var q2 = this.one(strQ, {table: 'Pet', values:[null, "Scot", 22, null, null]});
+&nbsp;
+            // returning a promise that determines a successful transaction:
+            return this.batch([q1, q2]); // all of the queries are to be resolved;
+        })
+        .then(<span class="fstat-no" title="function not covered" >function (data) {</span>
+            // success;
+<span class="cstat-no" title="statement not covered" >            Pet.find()</span>
+            .populateAll()
+            .exec(<span class="fstat-no" title="function not covered" >function (err, results) {</span>
+<span class="cstat-no" title="statement not covered" >                if(err) <span class="cstat-no" title="statement not covered" >return res.json(500, JSON.stringify(err))</span></span>
+<span class="cstat-no" title="statement not covered" >                return res.json(201, results)   </span>
+            })
+        })
+        .catch(function (error) {
+            // error;
+            return res.json(500, error)
+        });
+    },
+    owner: function (req, res) {
+        <span class="missing-if-branch" title="if path not taken" >I</span>if(!db) <span class="cstat-no" title="statement not covered" >db = pgp(cn);</span>
+        var owner = req.body;
+        db.tx(function (t) {
+            // `t` and `this` here are the same;
+            // creating a sequence of transaction queries:
+            var queries = [
+                this.any('select * from pet  where id = \'' + req.params.petId + '\';'),
+            ];
+            queries.push(
+                this.tx(function (t1) {
+                    return this.oneOrNone('INSERT INTO owner (name, city) VALUES(\'' + owner.name + '\', \'' + owner.city +'\')');
+                })
+            );
+            return this.batch(queries);
+        })
+        .then(function (data) {
+            // success;
+            Owner.findOne({name: owner.name})
+            .populateAll()
+            .exec(function (err, owner) {
+                <span class="missing-if-branch" title="if path not taken" >I</span>if(err) <span class="cstat-no" title="statement not covered" >return res.json(500, err)</span>
+                db.tx(function (t) {
+                    var q = this.oneOrNone('UPDATE pet SET owner=' + owner.id +' where id = ' + req.params.petId + '');
+                    return this.batch([q]);
+                }).then(function (data) {
+                    Pet.findOne({id:req.params.petId})
+                    .populateAll()
+                    .exec(function (err, pet) {
+                        return res.json(201, pet)  
+                    })
+                }).catch(<span class="fstat-no" title="function not covered" >function (error) {</span>
+                    // error;
+<span class="cstat-no" title="statement not covered" >                    return res.json(500, error)</span>
+                }); 
+            })
+        })
+        .catch(<span class="fstat-no" title="function not covered" >function (error) {</span>
+            // error;
+<span class="cstat-no" title="statement not covered" >            return res.json(500, error)</span>
+        });
+    },
+    ownerFail: function (req, res) {
+        <span class="missing-if-branch" title="if path not taken" >I</span>if(!db) <span class="cstat-no" title="statement not covered" >db = pgp(cn);</span>
+        var owner = req.body;
+        db.tx(function (t) {
+            // `t` and `this` here are the same;
+            // creating a sequence of transaction queries:
+            var queries = [
+                this.any('select * from pet  where id = \'' + req.params.petId + '\';'),
+            ];
+            queries.push(
+                this.tx(function (t1) {
+                    return this.oneOrNone('INSERT INTO owner (name, city) VALUES(\'' + owner.name + '\', \'' + owner.city +'\')');
+                })
+            );
+            return this.batch(queries);
+        })
+        .then(function (data) {
+            // success;
+            Owner.findOne({name: owner.name})
+            .populateAll()
+            .exec(function (err, owner) {
+                <span class="missing-if-branch" title="if path not taken" >I</span>if(err) <span class="cstat-no" title="statement not covered" >return res.json(500, err)</span>
+                db.tx(function (t) {
+                    var q = this.oneOrNone('UPDATE pet SET owner ' + owner.id +' where id = ' + req.params.petId + '');
+                    return this.batch([q]);
+                }).then(<span class="fstat-no" title="function not covered" >function (data) {</span>
+<span class="cstat-no" title="statement not covered" >                    Pet.findOne({id:req.params.petId})</span>
+                    .populateAll()
+                    .exec(<span class="fstat-no" title="function not covered" >function (err, pet) {</span>
+<span class="cstat-no" title="statement not covered" >                        return res.json(201, pet)  </span>
+                    })
+                }).catch(function (error) {
+                    // error;
+                    return res.json(500, error)
+                }); 
+            })
+        })
+        .catch(<span class="fstat-no" title="function not covered" >function (error) {</span>
+            // error;
+<span class="cstat-no" title="statement not covered" >            return res.json(500, error)</span>
+        });
+    }
+};
+&nbsp;
+&nbsp;</pre></td></tr>
+</table></pre>
+<div class='push'></div><!-- for sticky footer -->
+</div><!-- /wrapper -->
+<div class='footer quiet pad2 space-top1 center small'>
+  Code coverage
+  generated by <a href="http://istanbul-js.org/" target="_blank">istanbul</a> at Tue Sep 13 2016 15:38:50 GMT-0300 (BRT)
+</div>
+</div>
+<script src="../prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="../sorter.js"></script>
+</body>
+</html>
